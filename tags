@@ -1,0 +1,54 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+IDLE	thread_pool.h	/^typedef enum{READY, WORKING, IDLE} status_t;$/;"	e	enum:__anon1
+READY	thread_pool.h	/^typedef enum{READY, WORKING, IDLE} status_t;$/;"	e	enum:__anon1
+WORKING	thread_pool.h	/^typedef enum{READY, WORKING, IDLE} status_t;$/;"	e	enum:__anon1
+_GNU_SOURCE	thread_pool.c	1;"	d	file:
+_THREAD_POOL_H	thread_pool.h	2;"	d
+_block_task_queue	thread_pool.h	/^typedef struct _block_task_queue{$/;"	s
+_task_t	thread_pool.h	/^typedef struct _task_t{$/;"	s
+_thread	thread_pool.h	/^typedef struct _thread{$/;"	s
+_thread_pool	thread_pool.h	/^typedef struct _thread_pool{$/;"	s
+arg	thread_pool.h	/^    void *arg;$/;"	m	struct:_task_t
+block_queue_add_head	thread_pool.c	/^int block_queue_add_head(block_queue_t *tq, task_t *task){$/;"	f
+block_queue_clear	thread_pool.c	/^int block_queue_clear(block_queue_t *queue){$/;"	f
+block_queue_init	thread_pool.c	/^int block_queue_init(block_queue_t* queue){$/;"	f
+block_queue_remove_head	thread_pool.c	/^task_t *block_queue_remove_head(block_queue_t *tq){$/;"	f
+block_queue_t	thread_pool.h	/^} block_queue_t;$/;"	t	typeref:struct:_block_task_queue
+f	thread_pool.h	/^    void (*f)(void *);$/;"	m	struct:_task_t
+head	thread_pool.h	/^    task_t *head;$/;"	m	struct:_block_task_queue
+id	thread_pool.h	/^    unsigned int id;$/;"	m	struct:_task_t
+keepactive	thread_pool.h	/^    bool volatile keepactive;$/;"	m	struct:_thread_pool
+len	thread_pool.h	/^    int len;$/;"	m	struct:_block_task_queue
+lock	thread_pool.h	/^    pthread_mutex_t *lock;$/;"	m	struct:_block_task_queue
+main	test_thread_pool.c	/^int main(){$/;"	f
+next	thread_pool.h	/^    struct _task_t *next;$/;"	m	struct:_task_t	typeref:struct:_task_t::_task_t
+num_ready_threads	thread_pool.h	/^    int num_ready_threads;$/;"	m	struct:_thread_pool
+num_threads	thread_pool.h	/^    int num_threads;$/;"	m	struct:_thread_pool
+num_working_threads	thread_pool.h	/^    int num_working_threads;$/;"	m	struct:_thread_pool
+pid	thread_pool.h	/^    unsigned int pid;$/;"	m	struct:_thread
+pthread	thread_pool.h	/^    pthread_t *pthread;$/;"	m	struct:_thread
+status	thread_pool.h	/^    status_t status;$/;"	m	struct:_thread
+status_t	thread_pool.h	/^typedef enum{READY, WORKING, IDLE} status_t;$/;"	t	typeref:enum:__anon1
+task1	test_thread_pool.c	/^void task1(){$/;"	f
+task2	test_thread_pool.c	/^void task2(){$/;"	f
+task_t	thread_pool.h	/^} task_t;$/;"	t	typeref:struct:_task_t
+taskqueue	thread_pool.h	/^    block_queue_t *taskqueue;$/;"	m	struct:_thread_pool
+thread_clear	thread_pool.c	/^int thread_clear(thread_t *thread){$/;"	f
+thread_init	thread_pool.c	/^int thread_init(int id, thread_t *thread, thread_pool_t *tp){$/;"	f
+thread_pool_add_task	thread_pool.c	/^int thread_pool_add_task(thread_pool_t *tp, task_t *task){$/;"	f
+thread_pool_clear	thread_pool.c	/^int thread_pool_clear(thread_pool_t *tp){$/;"	f
+thread_pool_do_task	thread_pool.c	/^void thread_pool_do_task( void *ptr){$/;"	f
+thread_pool_init	thread_pool.c	/^thread_pool_t *thread_pool_init(int num_threads){$/;"	f
+thread_pool_t	thread_pool.h	/^} thread_pool_t;$/;"	t	typeref:struct:_thread_pool
+thread_pool_wait	thread_pool.c	/^int thread_pool_wait(thread_pool_t *tp){$/;"	f
+thread_t	thread_pool.h	/^} thread_t;$/;"	t	typeref:struct:_thread
+threads	thread_pool.h	/^    thread_t** threads;$/;"	m	struct:_thread_pool
+tp	thread_pool.h	/^    struct _thread_pool *tp;$/;"	m	struct:_thread	typeref:struct:_thread::_thread_pool
+tp_cnt_lock	thread_pool.h	/^    pthread_mutex_t *tp_cnt_lock;$/;"	m	struct:_thread_pool
+wait_all_idle	thread_pool.h	/^    pthread_cond_t *wait_all_idle;$/;"	m	struct:_thread_pool
+wait_job	thread_pool.h	/^    pthread_cond_t *wait_job;$/;"	m	struct:_block_task_queue
